@@ -25,6 +25,11 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 ![Imágen 1](images/part1/part1-vm-basic-config.png)
 
+![imagen](https://github.com/user-attachments/assets/05d70220-44eb-401f-b324-88845fbe15cc)
+
+![imagen](https://github.com/user-attachments/assets/4ff0d76e-1ab4-48d3-b359-2a4d6f0638d1)
+
+
 2. Para conectarse a la VM use el siguiente comando, donde las `x` las debe remplazar por la IP de su propia VM (Revise la sección "Connect" de la virtual machine creada para tener una guía más detallada).
 
     `ssh scalability_lab@xxx.xxx.xxx.xxx`
