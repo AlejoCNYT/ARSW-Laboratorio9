@@ -91,9 +91,15 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
    ![imagen](https://github.com/user-attachments/assets/070a1b0b-af51-4213-9b0e-d5e392fb416c)
       
     * Diríjase hasta la ruta `FibonacciApp/postman` en una maquina diferente a la VM.
-      
+      ![imagen](https://github.com/user-attachments/assets/abb8949c-f636-46cc-b350-54e7ec2b3846)
 
     * Para el archivo `[ARSW_LOAD-BALANCING_AZURE].postman_environment.json` cambie el valor del parámetro `VM1` para que coincida con la IP de su VM.
+      ![imagen](https://github.com/user-attachments/assets/bfa6667b-06c7-4c1b-a82a-f3585c84a238)
+
+      El cual contiene
+
+      ![imagen](https://github.com/user-attachments/assets/a16efb28-5674-444a-9b76-a8f7eddec6b2)
+
       
       
     * Ejecute el siguiente comando.
@@ -102,12 +108,18 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
     newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALANCING_AZURE].postman_environment.json -n 10 &
     newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALANCING_AZURE].postman_environment.json -n 10
     ```
+    ![imagen](https://github.com/user-attachments/assets/5eb2bc70-84e3-42dd-aa3f-1c0a142ea8b4)
 
 11. La cantidad de CPU consumida es bastante grande y un conjunto considerable de peticiones concurrentes pueden hacer fallar nuestro servicio. Para solucionarlo usaremos una estrategia de Escalamiento Vertical. En Azure diríjase a la sección *size* y a continuación seleccione el tamaño `B2ms`.
 
 ![Imágen 3](images/part1/part1-vm-resize.png)
 
-11. Una vez el cambio se vea reflejado, repita el paso 7, 8 y 9.
+![imagen](https://github.com/user-attachments/assets/3b3c512c-9676-42ef-a373-057466ece67c)
+
+11. Una vez el cambio se vea reflejado, repita el paso 7, 8 y 9. ![imagen](https://github.com/user-attachments/assets/e038b995-3824-409e-b15c-ce218ef845b2)  ![imagen](https://github.com/user-attachments/assets/3b5bfe25-8d6e-41b0-b5ac-dd7efe9a8a09)
+
+
+
 12. Evalue el escenario de calidad asociado al requerimiento no funcional de escalabilidad y concluya si usando este modelo de escalabilidad logramos cumplirlo.
 13. Vuelva a dejar la VM en el tamaño inicial para evitar cobros adicionales.
 
