@@ -88,8 +88,14 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 10. Ahora usaremos Postman para simular una carga concurrente a nuestro sistema. Siga estos pasos.
     * Instale newman con el comando `npm install newman -g`. Para conocer más de Newman consulte el siguiente [enlace](https://learning.getpostman.com/docs/postman/collection-runs/command-line-integration-with-newman/).
+   ![imagen](https://github.com/user-attachments/assets/070a1b0b-af51-4213-9b0e-d5e392fb416c)
+      
     * Diríjase hasta la ruta `FibonacciApp/postman` en una maquina diferente a la VM.
+      
+
     * Para el archivo `[ARSW_LOAD-BALANCING_AZURE].postman_environment.json` cambie el valor del parámetro `VM1` para que coincida con la IP de su VM.
+      
+      
     * Ejecute el siguiente comando.
 
     ```
