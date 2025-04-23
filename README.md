@@ -67,6 +67,8 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 ![imagen](https://github.com/user-attachments/assets/ef2321b1-869f-4d6f-aa4e-143ebfc2a882)
 
+![imagen](https://github.com/user-attachments/assets/b6741d60-4a3f-4f5b-9211-c102ca9e369c)
+
 7. La función que calcula en enésimo número de la secuencia de Fibonacci está muy mal construido y consume bastante CPU para obtener la respuesta. Usando la consola del Browser documente los tiempos de respuesta para dicho endpoint usando los siguintes valores:
     * 1000000
     * 1010000
@@ -85,7 +87,7 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
    ![Imágen 2](images/part1/part1-vm-cpu.png)
 
-   ![imagen](https://github.com/user-attachments/assets/f3551b2e-93b6-4621-a7f5-062f8522fc71)
+   ![imagen](https://github.com/user-attachments/assets/365cb8ac-d6f4-4932-bd53-2f71baacbd84)
 
 10. Ahora usaremos Postman para simular una carga concurrente a nuestro sistema. Siga estos pasos.
     * Instale newman con el comando `npm install newman -g`. Para conocer más de Newman consulte el siguiente [enlace](https://learning.getpostman.com/docs/postman/collection-runs/command-line-integration-with-newman/).
