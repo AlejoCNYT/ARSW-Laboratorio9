@@ -37,9 +37,10 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
    ![imagen](https://github.com/user-attachments/assets/92f67487-cf81-4419-b7da-033ea2850be4)
 
-   ![imagen](https://github.com/user-attachments/assets/d8130815-790c-44da-b695-b5052bde286f)
+   ![imagen](https://github.com/user-attachments/assets/bff3cc07-2f30-4057-8999-fbcced094c2a)
    
-4. Instale node, para ello siga la sección *Installing Node.js and npm using NVM* que encontrará en este [enlace](https://linuxize.com/post/how-to-install-node-js-on-ubuntu-18.04/).
+4. Instale node, para ello siga la sección *Installing Node.js and npm using NVM* que encontrará en este [enlace](https://linuxize.com/post/how-to-install-node-js-on-ubuntu-18.04/). ![imagen](https://github.com/user-attachments/assets/2f2c3caa-a8a9-4d96-8656-4bb9bf5ed850) 
+
 5. Para instalar la aplicación adjunta al Laboratorio, suba la carpeta `FibonacciApp` a un repositorio al cual tenga acceso y ejecute estos comandos dentro de la VM:
 
     `git clone <your_repo>`
