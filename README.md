@@ -120,7 +120,8 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 ![imagen](https://github.com/user-attachments/assets/3b3c512c-9676-42ef-a373-057466ece67c)
 
 11. Una vez el cambio se vea reflejado, repita el paso 7, 8 y 9. ![imagen](https://github.com/user-attachments/assets/a510361d-7e8b-4ed8-9058-a7f07f4039a4)  ![imagen](https://github.com/user-attachments/assets/e20bd317-8fff-4971-a97f-a1f696729d33) ![imagen](https://github.com/user-attachments/assets/25aff970-4798-477b-9e48-f36ccf31251f) ![imagen] (https://github.com/user-attachments/assets/37668bec-23c9-4ba4-8932-982dad3fc573) [imagen](https://github.com/user-attachments/assets/c3b846ca-5238-4ed2-a8fd-a090047aada6) ! [imagen](https://github.com/user-attachments/assets/b9076c6a-1301-4482-ab1f-0101fd2e62c8) ![imagen](https://github.com/user-attachments/assets/5b7e65d9-601e-4dd1-ba45-95b0267fd27e)
- ![imagen](https://github.com/user-attachments/assets/4ba56ca9-6df5-4e25- a9f5-8c0070494bbe)
+ ![imagen](https://github.com/user-attachments/assets/4ba56ca9-6df5-4e25- a9f5-8c0070494bbe) ![imagen](https://github.com/user-attachments/assets/506f8ea9-0bed-49b6-8d98-d2544fdd4ca9)
+![imagen](https://github.com/user-attachments/assets/e6ae35d4-be35-4332-bfca-3842263ad779)
 
 12. Evalue el escenario de calidad asociado al requerimiento no funcional de escalabilidad y concluya si usando este modelo de escalabilidad logramos cumplirlo.
 13. Vuelva a dejar la VM en el tamaño inicial para evitar cobros adicionales.
