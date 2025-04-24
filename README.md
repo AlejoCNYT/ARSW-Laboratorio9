@@ -256,8 +256,8 @@ http://52.155.223.248/fibonacci/1
 2. Realice las pruebas de carga con `newman` que se realizaron en la parte 1 y haga un informe comparativo donde contraste: tiempos de respuesta, cantidad de peticiones respondidas con éxito, costos de las 2 infraestrucruras, es decir, la que desarrollamos con balanceo de carga horizontal y la que se hizo con una maquina virtual escalada.
 
 Las imagenes con balanceo de carga procesan mejor las peticiones, generando mejores resultados.
-![imagen](https://github.com/user-attachments/assets/593ed751-5e21-4771-8fe5-b19a891f5380)
-
+**VM1**![imagen](https://github.com/user-attachments/assets/2bf2aacf-fcbb-4611-9c3e-27f10758a3dc) ![imagen](https://github.com/user-attachments/assets/d5e6cc31-3932-45be-9d76-6304bb9b3cea) **VM2** ![imagen](https://github.com/user-attachments/assets/aa6716a4-5565-498f-92cb-731bc64748ea)
+![imagen](https://github.com/user-attachments/assets/ce064adf-28dc-4c6d-a646-321726757ab9)
 
 3. Agregue una 4 maquina virtual y realice las pruebas de newman, pero esta vez no lance 2 peticiones en paralelo, sino que incrementelo a 4. Haga un informe donde presente el comportamiento de la CPU de las 4 VM y explique porque la tasa de éxito de las peticiones aumento con este estilo de escalabilidad.
 
