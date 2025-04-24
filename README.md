@@ -148,16 +148,34 @@ Azure genera los siguientes recursos, en principio:
    ![imagen](https://github.com/user-attachments/assets/e6ae35d4-be35-4332-bfca-3842263ad779)     
    
 9. Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
-
+![imagen](https://github.com/user-attachments/assets/0c78db02-3032-48a8-93bb-3fbcc4bdd9ce)
+- La función consume gran cantidad de recursos debido al recorrido iterativo sobre todos los números que debe recorrer.
     
 11. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
     * Tiempos de ejecución de cada petición.
+      ![imagen](https://github.com/user-attachments/assets/7d9a9b03-32e1-40f2-980a-cc204c9a872e) Antes del escalamiento se mostraban 4 vulnerabilidades. Posteriormente, un mejor uso de los recursos y, configuración elimina estos fallos.
+
     * Si hubo fallos documentelos y explique.
+   Errores asociados al cierre de servidores (ECONNRESET), proxys y pérdidas de conexión principalmente. Éstos se pueden deber a diferentes causas como intermediarios, climáticos, de escalamiento, etc.
+      
 12. ¿Cuál es la diferencia entre los tamaños `B2ms` y `B1ls` (no solo busque especificaciones de infraestructura)?
-13. ¿Aumentar el tamaño de la VM es una buena solución en este escenario?, ¿Qué pasa con la FibonacciApp cuando cambiamos el tamaño de la VM?
-14. ¿Qué pasa con la infraestructura cuando cambia el tamaño de la VM? ¿Qué efectos negativos implica?
-15. ¿Hubo mejora en el consumo de CPU o en los tiempos de respuesta? Si/No ¿Por qué?
-16. Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?
+   - B1ls: Tiene un tamaño _burstable_ de 1 VCPU y 0.5 GiB RAM, el cual es ideal para cargas ligeras y esporádicas. El límite de créditos es bajo,, lo que genera _throttling_ de carga sostenida.      
+   - B2ms: Tiene 2 vCPU y 8 GiB RAM, esto lo hace ideal para cargas moderadas y constantes. Su capacidad base e de 30% mayor a la anterior (40%) y tiene créditos de CPU que mejoran el rendimiento bajo carga.
+    
+14. ¿Aumentar el tamaño de la VM es una buena solución en este escenario?
+   - No necesariamente, esto se debe a baja eficiencia en el software. Incluso, la caída de VM durante el escalamiento genera la caída del servicio.
+      ¿Qué pasa con la FibonacciApp cuando cambiamos el tamaño de la VM?
+     - No escala automáticamente ante reinicios de carga, lo cual significa reinicio manual tras el escalamniento (downtime).
+    
+16. ¿Qué pasa con la infraestructura cuando cambia el tamaño de la VM? ¿Qué efectos negativos implica?
+   - La aplicación debe reiniciarse y el costo por hora aumenta cerca de 35%.
+    
+18. ¿Hubo mejora en el consumo de CPU o en los tiempos de respuesta? Si/No ¿Por qué?
+   - Sí, pero esto fue limitado: CPU -**30**% y tiempo -**40**%. Esto se debe al uso de concurrencia en el procesamiento.
+    
+20. Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?
+
+    - El rendimiento mejoró porcentualmente (más peticiones exitosas), pero la CPU alcanzó cerca de 90%, mostrando que el escalamiento vertical tiene un techo.
 
 ### Parte 2 - Escalabilidad horizontal
 
