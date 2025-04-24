@@ -238,6 +238,7 @@ npm install
 npm install forever -g
 forever start FibonacciApp.js
 ```
+![imagen](https://github.com/user-attachments/assets/36412b39-8acc-47c2-a7ba-24a3aa4d3c2d)
 
 Realice este proceso para las 3 VMs, por ahora lo haremos a mano una por una, sin embargo es importante que usted sepa que existen herramientas para aumatizar este proceso, entre ellas encontramos Azure Resource Manager, OsDisk Images, Terraform con Vagrant y Paker, Puppet, Ansible entre otras.
 
@@ -249,8 +250,12 @@ Realice este proceso para las 3 VMs, por ahora lo haremos a mano una por una, si
 http://52.155.223.248/
 http://52.155.223.248/fibonacci/1
 ```
+![imagen](https://github.com/user-attachments/assets/9488c7f8-efa4-4af5-b4b8-f639e45c2db5)
+![imagen](https://github.com/user-attachments/assets/21b76654-7463-4ed5-a01e-71e71efb7204)
 
 2. Realice las pruebas de carga con `newman` que se realizaron en la parte 1 y haga un informe comparativo donde contraste: tiempos de respuesta, cantidad de peticiones respondidas con éxito, costos de las 2 infraestrucruras, es decir, la que desarrollamos con balanceo de carga horizontal y la que se hizo con una maquina virtual escalada.
+
+
 
 3. Agregue una 4 maquina virtual y realice las pruebas de newman, pero esta vez no lance 2 peticiones en paralelo, sino que incrementelo a 4. Haga un informe donde presente el comportamiento de la CPU de las 4 VM y explique porque la tasa de éxito de las peticiones aumento con este estilo de escalabilidad.
 
