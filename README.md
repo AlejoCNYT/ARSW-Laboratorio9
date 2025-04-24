@@ -1,4 +1,4 @@
-![imagen](https://github.com/user-attachments/assets/619dc254-cccf-4a39-a296-8fe93bb54e72)### Escuela Colombiana de Ingeniería
+
 ### Arquitecturas de Software - ARSW
 
 ## Escalamiento en Azure con Maquinas Virtuales, Sacale Sets y Service Plans
