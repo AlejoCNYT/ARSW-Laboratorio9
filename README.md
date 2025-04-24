@@ -1,4 +1,4 @@
-### Escuela Colombiana de Ingeniería
+![imagen](https://github.com/user-attachments/assets/619dc254-cccf-4a39-a296-8fe93bb54e72)### Escuela Colombiana de Ingeniería
 ### Arquitecturas de Software - ARSW
 
 ## Escalamiento en Azure con Maquinas Virtuales, Sacale Sets y Service Plans
@@ -264,13 +264,39 @@ newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALAN
 **Preguntas**
 
 * ¿Cuáles son los tipos de balanceadores de carga en Azure y en qué se diferencian?, ¿Qué es SKU, qué tipos hay y en qué se diferencian?, ¿Por qué el balanceador de carga necesita una IP pública?
+ **Azure Load Balancer** (Capa 4) Permite balanceo básico de tráfico de red, ideal para apps no HTTP y, soporta alta disponibilidad con IP pública. 
+  **Aplicatión Gateway** (Capa 7) Ofrece enrutamiento de URL, Cookies y SSL Offiline. Es ideal para aplicaciones Web.
+  **Azure Front Door** (Capa 7) Da Balanceo Global, Protección DDOS y acelera contenido caché.
+  **Traffic Manager** (Capa DNS) Balanceo DNS y no maneja tráfico directo, sólo redirije.
+  
 * ¿Cuál es el propósito del *Backend Pool*?
+   - Es un grupo de recursos que reciben trafico balanceado. Tiene como propósito distribuir la carga entre múltiples unestancias y, asegurar alta disponibilidad.
+  
 * ¿Cuál es el propósito del *Health Probe*?
+   - Es el mecanismo de verificación de estado de las instancias del _Backend Pool_. Cumple el própósito de evitar tráfico no saludable y detectar fallos. También soporta protocolos TCP, HTTP y HTTPS.
+  
 * ¿Cuál es el propósito de la *Load Balancing Rule*? ¿Qué tipos de sesión persistente existen, por qué esto es importante y cómo puede afectar la escalabilidad del sistema?.
+   Éste define cómo distribuír el tráfico. Los tipos de sesión persistente son **ninguna** (petición diferente para el backend con mejor balanceo pero sin estado), **Ip de cliente** (Mismo backend para cliente, es útil para aplicaciones con estado pero puede variar) y **Cookie de aplicación**. (persistencia de cookies). 
+  
 * ¿Qué es una *Virtual Network*? ¿Qué es una *Subnet*? ¿Para qué sirven los *address space* y *address range*?
+   - **Virtual Network** (VNet): Red privada para conectar recursos, en Azure (VMs, LB, etc.).
+
+    **Subnet**: Segmento lógico de una Virtual Network (VNet) (ej: frontend-subnet, backend-subnet).
+
+    **Address Space**: Rango IP global de la Virtual Network (ej: 10.0.0.0/16).
+
+    **Address Range**: Subconjunto del Address Space asignado a una red (ej: 10.0.1.0/24).
+  
 * ¿Qué son las *Availability Zone* y por qué seleccionamos 3 diferentes zonas?. ¿Qué significa que una IP sea *zone-redundant*?
+  **Availability Zone** (AZs): Son centros de datos separados en una región. Se requieren 3 para sostener la tolerancia de fallos.
+  **IP Zone-redundant**: Se aplica en múltiples AZs y garantiza disponibilidad bajo fallas, inclusive.
+  
 * ¿Cuál es el propósito del *Network Security Group*?
+- Es un _firewall_ de control de tráfico saliente y entrante.Comúnmente permite SSH (puerto 22), HTTP (puerto 80), o personalizados (ej: 3000 para FibonacciApp).
+  
 * Informe de newman 1 (Punto 2)
+![imagen](https://github.com/user-attachments/assets/25d2ceec-66ec-4641-936f-ad8970c7caca)
+
 * Presente el Diagrama de Despliegue de la solución.
 
 
